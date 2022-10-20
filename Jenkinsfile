@@ -3,7 +3,8 @@ pipeline {
   
   tools {nodejs "nodejs"}
   
-  stage('Install dependencies') {
+  stages {
+    stage('Install dependencies') {
       steps {
         sh 'npm i -save express'
       }
@@ -12,6 +13,7 @@ pipeline {
       steps {
         sh 'npm start'
       }
-    }            
+    }
+  }
  }
   
