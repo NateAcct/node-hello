@@ -6,7 +6,7 @@ pipeline {
     }
   }
   
-  tools {nodejs "node"}
+//   tools {nodejs "node"}
   
   stages {
    stage('Clone') {
