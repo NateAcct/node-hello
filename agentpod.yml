@@ -2,12 +2,6 @@ apiVersion: v1
 kind: Pod
 spec:
   containers:
-  - name: maven
-    image: registry1.dso.mil/ironbank/opensource/maven/maven-openjdk-8
-    imagePullPolicy: "IfNotPresent"
-    command:
-    - cat
-    tty: true
   - name: anchore
     image: registry1.dso.mil/ironbank/anchore/engine/engine
     imagePullPolicy: "IfNotPresent"
