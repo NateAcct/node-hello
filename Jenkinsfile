@@ -20,7 +20,7 @@ pipeline {
     stage('Anchore') {
       steps {
         container('anchore') {
-          sh 'anchore-cli --version'
+          sh 'anchore-cli --u admin --p foobar system status'
         }
       }
     }  
