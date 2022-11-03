@@ -28,7 +28,7 @@ pipeline {
     stage('Anchore Status') {
       steps {
         container('anchore') {
-          sh 'anchore-cli --url http://localhost:8228/v1 --u admin --p foobar system status'
+          sh 'anchore-cli --url http://localhost:8228/v1 --u admin --p anchore-engine system status'
         }
       }
     }  
