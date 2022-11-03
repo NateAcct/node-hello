@@ -15,6 +15,14 @@ pipeline {
           sh 'mvn -v'
         }
       }
+    }
+    
+    stage('Anchore') {
+      steps {
+        container('anchore') {
+          sh 'anchore-cli --version'
+        }
+      }
     }  
   }
  }
