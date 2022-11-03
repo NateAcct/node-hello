@@ -9,14 +9,6 @@ pipeline {
 //   tools {nodejs "node"}
   
   stages {
-   stage('Clone') {
-      steps {
-        container('maven') {
-          sh 'mvn -v'
-        }
-      }
-    }
-    
     stage('Anchore Version') {
       steps {
         container('anchore') {
