@@ -9,16 +9,13 @@ pipeline {
   tools {nodejs "node"}
   
   stages {
-    stage('Install dependencies') {
+   stage('Clone') {
       steps {
-        sh 'npm i -save express'
+        container('maven') {
+          sh 'mvn -v'
+        }
       }
-    }     
-    stage('Test') {
-      steps {
-        sh 'npm start'
-      }
-    }
+    }  
   }
  }
   
