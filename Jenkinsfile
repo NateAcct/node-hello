@@ -20,7 +20,7 @@ pipeline {
     stage('Anchore Version') {
       steps {
         container('anchore') {
-          sh 'anchore-cli --version'
+          sh 'env'
         }
       }
     } 
