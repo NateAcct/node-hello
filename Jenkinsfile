@@ -12,7 +12,7 @@ pipeline {
   stages {
      stage('Buildah') {
       steps {
-        container('Buildah') {
+        container('buildah') {
           sh 'buildah --version'
         }
       }
