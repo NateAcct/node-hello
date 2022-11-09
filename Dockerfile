@@ -1,4 +1,4 @@
-ARG BASE_REGISTRY-registry1.dso.mil/ironbank
+ARG BASE_REGISTRY=registry1.dso.mil/ironbank
 ARG BASE_IMAGE=redhat/ubi/ubi8
 ARG BASE_TAG=8.4
 
