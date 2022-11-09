@@ -25,4 +25,4 @@ RUN yum -y update && \
     rm -rf /var/cache /var/log/dnf* /var/log/yum.* && \
     yum clean all
     
-RUN pip3 install --ugrade anchorecli
+RUN pip3 install --upgrade anchorecli
