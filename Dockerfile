@@ -26,3 +26,5 @@ RUN yum -y update && \
     yum clean all
     
 RUN pip3 install --upgrade anchorecli
+
+RUN anchore-cli --url http://localhost:8228/v1 -u admin -p foobar system status
