@@ -14,3 +14,9 @@ spec:
     command:
     - cat
     tty: true
+  - name: buildah12
+    image: quay.io/buildah/stable:latest
+    imagePullPolicy: "IfNotPresent"
+    command:
+    - cat
+    tty: true
