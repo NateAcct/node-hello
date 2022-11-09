@@ -18,7 +18,7 @@ RUN yum -y update && \
     python3-pip \
     yum-utils \
     sudo \
-    fuse-overlays \
+    fuse-overlaysfs \
     crun \
     podman \
     --exclude container-selinux && \
