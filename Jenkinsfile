@@ -13,7 +13,7 @@ pipeline {
      stage('Buildah') {
       steps {
         container('buildah12') {
-          sh 'buildah build -t anchore-cli .'
+          sh 'buildah build --storage-driver vfs -t anchore-cli .'
         }
       }
     }
