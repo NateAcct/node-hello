@@ -10,13 +10,22 @@ pipeline {
 //   tools {nodejs "node"}
   
   stages {
-    stage('Anchore Version') {
+     stage('Build image') {
       steps {
-        container('anchoreapi') {
-          sh 'anchore-cli --version'
+        container('buildah') {
+          sh 'buildah --version'
+          sh 'buildah images'
         }
       }
-    } 
+    }
+    
+//     stage('Anchore Version') {
+//       steps {
+//         container('anchoreapi') {
+//           sh 'anchore-cli --version'
+//         }
+//       }
+//     } 
     
 //     stage('Anchore Status') {
 //       steps {
