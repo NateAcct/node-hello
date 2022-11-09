@@ -8,7 +8,7 @@ spec:
 #     command:
 #     - cat
 #     tty: true
-  - name: Buildah
+  - name: buildah
     image: registry1.dso.mil/ironbank/opensource/containers/buildah
     imagePullPolicy: "IfNotPresent"
     command:
