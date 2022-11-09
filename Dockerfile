@@ -2,7 +2,8 @@ ARG BASE_REGISTRY=registry1.dso.mil/ironbank
 ARG BASE_IMAGE=redhat/ubi/ubi8
 ARG BASE_TAG=8.4
 
-FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
+# FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
+FROM registry.access.redhat.com/ubi8:8.4
 
 ARG USER=anchorecli
 ARG GROUP=anchorecli
