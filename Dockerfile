@@ -10,8 +10,7 @@ ARG GROUP=anchorecli
 ARG UID=1000
 ARG GID=1000
 
-RUN groupadd -g ${GID} ${GROUP} && \
-    useradd -m -u ${UID} -g ${GID} ${user}
+RUN groupadd -g ${GID} ${GROUP} && useradd -m -u ${UID} -g ${GID} ${user}
 
 RUN yum -y update && \
     yum -y install --disableplugin=subscription-manager \
