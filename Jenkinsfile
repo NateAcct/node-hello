@@ -10,9 +10,9 @@ pipeline {
 //   tools {nodejs "node"}
   
   stages {
-     stage('Build image') {
+     stage('Buildah') {
       steps {
-        container('buildah') {
+        container('Buildah') {
           sh 'buildah --version'
         }
       }
