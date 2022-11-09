@@ -13,7 +13,7 @@ pipeline {
      stage('Buildah') {
       steps {
         container('buildah12') {
-          sh 'buildah --version'
+          sh 'buildah build -t anchore-cli'
         }
       }
     }
