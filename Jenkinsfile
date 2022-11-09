@@ -1,11 +1,11 @@
 pipeline {  
-//   agent any
-  agent {
-    kubernetes {
-      defaultContainer 'jnlp'
-      yamlFile 'agentpod.yml'
-    }
-  }
+  agent any
+//   agent {
+//     kubernetes {
+//       defaultContainer 'jnlp'
+//       yamlFile 'agentpod.yml'
+//     }
+//   }
   
 //   tools {nodejs "node"}
   
