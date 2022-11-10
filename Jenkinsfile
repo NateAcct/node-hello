@@ -14,6 +14,12 @@ pipeline {
       steps {
         container('anchore') {
           sh 'anchore-cli system status'
+          sh 'anchore-cli image add rancher/mirrored-library-busybox:1.34.1'
+          sh 'anchore-cli image wait rancher/mirrored-library-busybox:1.34.1'
+          sh 'anchore-cli system feeds list'
+          sh 'anchore-cli system wait'
+          sh 'anchore-cli image vuln rancher/mirrored-library-busybox:1.34.1 os'
+          sh 'anchore-cli image content rancher/mirrored-library-busybox:1.34.1 os'
         }
       }
     }
