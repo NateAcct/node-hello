@@ -20,3 +20,9 @@ spec:
     command:
     - cat
     tty: true
+  - name: anchore
+    image: anchore-cli:latest
+    imagePullPolicy: "IfNotPresent"
+    command:
+    - cat
+    tty: true
