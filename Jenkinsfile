@@ -10,10 +10,10 @@ pipeline {
 //   tools {nodejs "node"}
   
   stages {
-     stage('Buildah') {
+     stage('Anchore') {
       steps {
-        container('buildah12') {
-          sh 'buildah build --storage-driver vfs -t anchore-cli .'
+        container('anchore') {
+          sh 'anchore-cli --url http://localhost:8228/v1 --u admin --p anchore-engine system status'
         }
       }
     }
