@@ -2,33 +2,20 @@ apiVersion: v1
 kind: Pod
 spec:
   containers:
-#   - name: anchore
-#     image: registry1.dso.mil/ironbank/anchore/engine/engine
-#     imagePullPolicy: "IfNotPresent"
-#     command:
-#     - cat
-#     tty: true
+  - name: maven
+    image: registry1.dso.mil/ironbank/opensource/maven/maven-openjdk-8
+    imagePullPolicy: "IfNotPresent"
+    command:
+    - cat
+    tty: true
   - name: buildah
     image: registry1.dso.mil/ironbank/opensource/containers/buildah
     imagePullPolicy: "IfNotPresent"
     command:
     - cat
     tty: true
-  - name: buildah12
-    image: quay.io/buildah/stable:latest
-    imagePullPolicy: "IfNotPresent"
-    command:
-    - cat
-    tty: true
   - name: anchore
-    image: anchore-cli:latest
-    env:
-    - name: ANCHORE_CLI_URL
-      value: http://172.18.242.118:8228/v1
-    - name: ANCHORE_CLI_USER
-      value: admin
-    - name: ANCHORE_CLI_PASS
-      value: foobar
+    image: registry1.dso.mil/ironbank/anchore/engine/engine
     imagePullPolicy: "IfNotPresent"
     command:
     - cat
