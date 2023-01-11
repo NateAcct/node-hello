@@ -24,7 +24,7 @@ pipeline {
       steps {
         container('maven') {
           sh 'mvn -v'
-          sh 'giberish'
+//           sh 'giberish'
         }
       }
     }
