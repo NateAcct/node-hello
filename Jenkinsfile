@@ -10,6 +10,8 @@ pipeline {
   environment {
 //             EMAIL_INFORM = 'nathan.nti@accenturefederal.com;nathan.nti@afs.com'
           EMAIL_INFORM = 'nathan@zector.io'
+          JENKINS_JAVA_OPTIONS = '-Djava.awt.headless=true -Dmail.smtp.starttls.enable=true'
+          JENKINS_OPTS = '-Dmail.smtp.starttls.enable=true'
         }
   
 //   options {
