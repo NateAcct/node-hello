@@ -7,13 +7,6 @@ pipeline {
     }
   }
   
-  environment {
-//             EMAIL_INFORM = 'nathan.nti@accenturefederal.com;nathan.nti@afs.com'
-          EMAIL_INFORM = 'nathan@zector.io'
-          JENKINS_JAVA_OPTIONS = '-Djava.awt.headless=true -Dmail.smtp.starttls.enable=true'
-          JENKINS_OPTS = '-Dmail.smtp.starttls.enable=true'
-        }
-  
 //   options {
 //         office365ConnectorWebhooks([
 //             [name: "Office 365", url: "${URL_WEBHOOK}", notifyBackToNormal: true, notifyFailure: true, notifyRepeatedFailure: true, notifySuccess: true, notifyAborted: true]
@@ -36,7 +29,7 @@ pipeline {
   post {
     always {  
       emailext body: 'Check console output at $BUILD_URL to view the results.', 
-              to: "${EMAIL_INFORM}", 
+              to: "nathan@zector.io", 
               subject: 'Jenkins - Released $PROJECT_NAME - #$BUILD_NUMBER'
       }
   }
