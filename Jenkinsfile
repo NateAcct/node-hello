@@ -29,7 +29,7 @@ pipeline {
   post {
     always {  
       emailext body: 'Check console output at $BUILD_URL to view the results.', 
-              to: "eventsfornathan@gmail.com", 
+              to: "nathan.nti@accenturefederal.com", 
               subject: 'Jenkins - Released $PROJECT_NAME - #$BUILD_NUMBER'
       }
   }
